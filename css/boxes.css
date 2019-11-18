@@ -1,0 +1,130 @@
+@media only screen and (max-width 600px) {}
+
+.red {
+    background-color: #2B4D56;
+    padding: 20px 20px;
+    text-align: left;
+    
+/*    margin-bottom: 4px;*/
+}
+.teal {
+    background-color: #2B4D56;
+    padding: 20px 75px;
+    text-align: right;
+}
+
+.blue {
+    background-color: blue;
+    padding: 20px 0px;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+
+.green {
+    background-color: green;
+    padding: 20px 0px;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+
+.aqua {
+    background-color: aqua;
+    padding: 20px 0px;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.orange {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: solid 6px #59435B;
+    padding: 20px 0px;
+    text-align: center;
+    margin-bottom:90px;
+     margin-top: 90px;
+}
+#photo {
+    background-image: url(../clear_day.jpg);
+    background-size: cover;
+}
+
+/*Whats The WEATHER?*/
+h1 {
+    font-family: serif;
+    font-weight: 100;
+    font-size: 100px;
+    color: white;
+    justify-content: flex-end;
+}
+
+/*City*/
+h2 {
+    justify-content: center;
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 80px;
+    color: #59435B;
+}
+
+/*Degree Temputure*/
+h3 {
+    justify-content: center;
+    font-family: sans-serif;
+    font-size: 200px;
+    color: #59435B;
+}
+
+/*SEARCH*/
+h4 {
+    font-family: sans-serif;
+}
+
+/*Enter a zip code*/
+h5 {
+    font-family: sans-serif;
+}
+
+/*
+Dark Purple #59435B
+Dark Green #212C25
+Dark Blue #2B4D56
+*/
+@media screen and (max-width: 992px) {   
+
+h1 {
+    font-family: serif;
+    font-weight: 100;
+    font-size: 50px;
+    color: white;
+    justify-content: flex-end;
+    text-align: left;
+}
+
+}
+
+
+@media screen and (max-width: 768px) {   
+h1 {
+    font-family: serif;
+    font-weight: 100;
+    font-size: 30px;
+    color: white;
+    justify-content: flex-end;
+    text-align: left;
+}
+
+
+}
+@media screen and (max-width: 576px) {   
+
+h1 {
+    font-family: serif;
+    font-weight: 100;
+    font-size: 50px;
+    color: white;
+    justify-content: flex-end;
+    text-align: left;
+}
+
+}
