@@ -20,6 +20,10 @@ $("#search_btn").click(function() {
         console.log("temp:", responseFromOW.main.temp);
         console.log("city:", responseFromOW.name);
         console.log("condition:", responseFromOW.weather[0].description);
+        
+        var temp = responseFromOW.main.temp;
+        var city = responseFromOW.name;
+        var description = responseFromOW.weather[0].descrition;
     });
     
 });
