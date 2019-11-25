@@ -10,8 +10,10 @@ $("#search_btn").click(function() {
    //variable for the OpenWeather API URL
     var apiLink = 'https://api.openweathermap.org/data/2.5/weather';
     var apiKey = '872004b8bf62ae043b25b98a2189e4ec';
+    var apiUnits = '&units=imperial';
     var zipInput = $('#inputPassword2').val();
-    var apiURL = apiLink + '?zip=' zipInput + '&appid=' + apiKey;
+    var apiURL = apiLink + '?zip=' + zipInput + '&appid=' + apiKey + apiUnits;
+    var clearSky = "<img src='/'>"
     
     console.log(apiURL);
     
@@ -21,9 +23,38 @@ $("#search_btn").click(function() {
         console.log("city:", responseFromOW.name);
         console.log("condition:", responseFromOW.weather[0].description);
         
-        var temp = responseFromOW.main.temp;
+        var temp = responseFromOW.main.temp_max;
         var city = responseFromOW.name;
-        var description = responseFromOW.weather[0].descrition;
+        var description = responseFromOW.weather[0].description;
+            
+        
+        $('#city').html(responseFromOW.name);
+        $('#temp').html(temp + 'º')
+        $('#description').html(description);
+        
+        
+if (responseFromOW.weather[0].main === "Clouds") {
+            $('#weather_background').css('background-image', "url(images/cloudy.jpg)");
+        } else if (responseFromOW.weather[0].main === "Clear") {
+            $('#weather_background').css('background-image', "url(images/clear_day.jpg)");
+        } else if (responseFromOW.weather[0].main === "Thunderstorm") {
+            $('#weather_background').css('background-image', "url(images/thunderstorm.jpg)");
+        } else if (responseFromOW.weather[0].main === "Drizzle") {
+            $('#weather_background').css('background-image', "url(images/sleet.jpg)");
+        } else if (responseFromOW.weather[0].main === "Rain") {
+            $('#weather_background').css('background-image', "url(images/rain.jpg)");
+        } else if (responseFromOW.weather[0].main === "Snow") {
+            $('#weather_background').css('background-image', "url(images/snow.jpg)");
+        } else if (responseFromOW.weather[0].main === "Mist") {
+            $('#weather_background').css('background-image', "url(images/fog.jpg)");
+        } else if (responseFromOW.weather[0].main === "Haze") {
+            $('#weather_background').css('background-image', "url(images/fog.jpg)");
+        } else if (responseFromOW.weather[0].main === "Fog") {
+            $('#weather_background').css('background-image', "url(images/fog.jpg)");
+        } else if (responseFromOW.weather[0].main === "Tornado") {
+            $('#weather_background').css('background-image', "url(images/tornado.jpg)");
+        }  
+         
     });
     
 });

@@ -44,8 +44,9 @@
     margin-bottom:90px;
      margin-top: 90px;
 }
-#photo {
-    background-image: url(../clear_day.jpg);
+
+#weather_background {
+/*    background-image: url(../clear_day.jpg);*/
     background-size: cover;
 }
 
@@ -83,6 +84,15 @@ h4 {
 /*Enter a zip code*/
 h5 {
     font-family: sans-serif;
+}
+
+/*Description*/
+h6 {
+    justify-content: center;
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 30px;
+    color: #59435B;
 }
 
 /*
